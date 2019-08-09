@@ -5,17 +5,17 @@ function Header() {
     const date = new Date()
     const hours = date.getHours()
     let timeOfDay
-    
+
     if (hours < 12) {
-      timeOfDay = "morning"
+        timeOfDay = "morning"
     } else if (hours >= 12 && hours < 17) {
-      timeOfDay = "afternoon"
+        timeOfDay = "afternoon"
     } else {
-      timeOfDay = "night"
+        timeOfDay = "night"
     }
     const styles = {
-      color: "#FF8C00"    
-    }     
+        color: "#FF8C00"
+    }
     return (
         <header className="header">Good {timeOfDay}!</header>
     )

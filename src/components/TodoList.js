@@ -1,15 +1,15 @@
 import React from "react"
 import "./TodoList.css"
 import TodoItem from "./TodoItem"
+import itemsData from "../itemsData"
 
-function TodoList(){
-    
+const todoItems = itemsData.map(item => <TodoItem key={item.id} data={item} />)
+
+function TodoList() {
+
     return (
         <div className="todo-list">
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
+            {todoItems}
         </div>
     )
 }
