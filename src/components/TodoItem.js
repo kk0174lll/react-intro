@@ -19,13 +19,18 @@ class TodoItem extends Component {
     }
 
     render() {
+        const completedStyle = {
+            fontStyle: "italic",
+            color: "#cdcdcd",
+            textDecoration: "line-through"
+        }
         return (
             <div className="todo-item">
                 <input type="checkbox"
                     id={this.props.data.id}
                     checked={this.state.checked}
                     onChange={this.handleOnChange} />
-                <p>{this.props.data.toDoText}</p>
+                <p style={this.state.checked ? completedStyle: null}>{this.props.data.toDoText}</p>
             </div>
         )
     }
