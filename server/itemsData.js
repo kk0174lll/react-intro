@@ -25,4 +25,8 @@ const itemsData = [
         completed: false
     }
 ]
-export default itemsData
+
+module.exports={
+    itemsData:itemsData
+}
+
