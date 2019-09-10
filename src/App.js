@@ -1,17 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Header"
-import MainContent from "./components/MainContent"
-import Footer from "./components/Footer"
+import ToDo from "./todo/ToDo"
+import Forms from "./forms/Forms"
+import { BrowserRouter, Route } from "react-router-dom";
 
+//npm install --save react-router-dom
 function App() {
   return (
-    <div>
-      <Header />
-      <MainContent />
-      <Footer />
-    </div>
+    <BrowserRouter>        
+      <Route exact path="/" component={ToDo} />
+      <Route exact path="/forms" component={Forms} />
+    </BrowserRouter>
   )
 }
 
